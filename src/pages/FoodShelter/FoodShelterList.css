@@ -1,0 +1,82 @@
+
+.food-shelter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .food-shelter-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .food-shelter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .food-shelter-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .food-shelter-card-content {
+    padding: 15px;
+  }
+  
+  .food-shelter-card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .food-shelter-card-address {
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .food-shelter-card-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .food-shelter-card-button {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .food-shelter-card-button-primary {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .food-shelter-card-button-primary:hover {
+    background-color: #45a049;
+  }
+  
+  .food-shelter-card-button-secondary {
+    background-color: #e7e7e7;
+    color: black;
+  }
+  
+  .food-shelter-card-button-secondary:hover {
+    background-color: #ddd;
+  }
+  
+  /* Adjustments for responsiveness */
+  @media only screen and (max-width: 600px) {
+    .food-shelter-card {
+      width: 100%;
+    }
+  }
+  
