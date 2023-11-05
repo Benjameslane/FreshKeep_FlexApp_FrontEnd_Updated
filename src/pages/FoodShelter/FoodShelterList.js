@@ -33,7 +33,7 @@ const FoodShelterList = () => {
       {foodShelters && (
         <div className="shelter-container">
           {foodShelters.map((shelter, index) => (
-            <div key={index} class="box">
+            <div key={index} className="box">
               <p><strong>{shelter.name}</strong></p>
               <p>{shelter.vicinity}</p>
             </div>
