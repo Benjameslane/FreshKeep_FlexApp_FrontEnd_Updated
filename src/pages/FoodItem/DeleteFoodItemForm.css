@@ -1,0 +1,22 @@
+.food-box {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.column {
+    flex: 50%;
+}
+
+.food-property {
+    font-weight: bold;
+}
+
+.food-box p {
+    text-align: left;
+    font-size: small;
+}

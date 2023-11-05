@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
+import "./RegisterPage.css";
 
 const RegisterPage = () => {
   const { registerUser } = useContext(AuthContext);
@@ -19,8 +20,8 @@ const RegisterPage = () => {
   );
 
   return (
-    <div className="container">
-      <form className="form" onSubmit={handleSubmit}>
+    <div className="register-container">
+      <form className="register-form" onSubmit={handleSubmit}>
         <label>_
           Username:{" "}
           <input
@@ -74,7 +75,7 @@ const RegisterPage = () => {
             onChange={handleInputChange}
           >
             <option value="">Select User Type</option>
-            <option value="Environmentalist">Environmentalist</option>
+            <option value="Homeowner/Renter">Homeowner/Renter</option>
             <option value="Store Owner">Store Owner</option>
           </select>
         </label>

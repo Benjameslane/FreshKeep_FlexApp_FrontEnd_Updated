@@ -5,8 +5,9 @@ import FoodShelterList from "./pages/FoodShelter/FoodShelterList";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import InventoryPage from "./pages/Inventory/InventoryPage";
 import RecipesPage from "./pages/Recipe/RecipesPage";
-import FoodItemList from "./pages/FoodItem/FoodItemList";
+import DiscountedItemsPage from "./pages/DiscountedItems/DiscountedItemsPage";
 
 
 // Component Imports
@@ -18,7 +19,7 @@ import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
       <Routes>
         <Route
@@ -33,8 +34,10 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/food-shelters" element={<FoodShelterList />} />
         <Route path="/add-food-item" element={<FoodItemForm />} />
+        <Route path="/inventory" element={<InventoryPage />} />
         <Route path="/recipes" element={<RecipesPage />} />
-        <Route path="/food-items" element={<FoodItemList />} />
+        <Route path="/discountedItems" element={<DiscountedItemsPage />} />
+        <Route path="/foodShelters" element={<FoodShelterList />} />
         
       </Routes>
       

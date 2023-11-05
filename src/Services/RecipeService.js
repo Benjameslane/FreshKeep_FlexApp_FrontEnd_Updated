@@ -1,29 +1,18 @@
 import axios from 'axios';
 
-const API_URL = 'https://localhost:5001/api/'; 
+const API_BASE_URL = 'https://localhost:5001/api';
 
-const getRecipesByExpiringItems = async (days) => {
+export const getRecipes = async (expiringFood, userToken) => {
   try {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      console.error("No authentication token found");
-      return [];
-    }
-
-    const response = await axios.get(`${API_URL}recipes/by-expiring-items`, {
-      params: { days },
+    const itemNames = expiringFood.map(foodItem => foodItem.itemName).join(',+');
+    const response = await axios.get(`${API_BASE_URL}/Recipe?ingredients=${itemNames}`, {
       headers: {
-        'Authorization': `Bearer ${token}`
+        'Authorization': `Bearer ${userToken}`
       }
     });
     return response.data;
   } catch (error) {
-    console.error("Error fetching recipes", error);
-    return [];
+    console.error('Error getting expiring food items', error);
+    throw error;
   }
-};
-
-
-export default {
-  getRecipesByExpiringItems
 };

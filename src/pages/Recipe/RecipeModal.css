@@ -1,0 +1,52 @@
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 999; /* Ensure it's above other content */
+}
+
+.recipe-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+
+.recipe-body {
+    padding: 20px;
+}
+
+.recipe-body .content li {
+    font-size: small;
+}
+
+.recipe-header {
+    border-bottom: #eeeeee solid 1px;
+}
+.recipe-header h2 {
+    font-size: 20px;
+}
+
+.close-btn {
+    color: #aaaaaa;
+    font-size: 20px;
+    text-decoration: none;
+    padding:10px;
+    position: absolute;
+    right: 7px;
+    top: 0;
+}
+
+.close-btn:hover {
+    color: #919191;
+    cursor: pointer;
+}

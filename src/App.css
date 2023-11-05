@@ -8,6 +8,12 @@
   box-sizing: inherit;
 }
 
+.App {
+  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 html {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;

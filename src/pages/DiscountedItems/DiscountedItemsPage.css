@@ -1,0 +1,48 @@
+.discounted-header h1 {
+    text-align: center;
+}
+
+.discounted-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    border-top: solid;
+}
+
+.discounted-container .food-box {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 400px;
+    margin: 10px;
+    background-color: #fffdd6;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.column {
+    flex: 50%;
+}
+
+.discounted-container .food-property {
+    font-weight: bold;
+}
+
+.discounted-container .food-box p {
+    text-align: left;
+    font-size: small;
+}
+
+@media screen and (max-width:1200px) {
+    .discounted-container .food-box {
+      width: 40%
+    }
+}
+
+@media screen and (max-width:600px) {
+    .discounted-container .food-box {
+      width: 90%
+    }
+}

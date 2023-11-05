@@ -1,0 +1,48 @@
+.store-header h1 {
+    text-align: center;
+}
+
+.store-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    border-top: solid;
+}
+
+.store-container .food-box {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 350px;
+    margin: 10px;
+    background-color: #d9e3fc;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.column {
+    flex: 50%;
+}
+
+.food-property {
+    font-weight: bold;
+}
+
+.food-box p {
+    text-align: left;
+    font-size: small;
+}
+
+@media screen and (max-width:1200px) {
+    .food-box {
+      width: 40%
+    }
+}
+
+@media screen and (max-width:600px) {
+    .food-box {
+      width: 90%
+    }
+}

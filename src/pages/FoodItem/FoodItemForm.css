@@ -1,0 +1,78 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+
+.popup .form .buttons {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+}
+
+.popup .form .select {
+    width: 100%;
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.quantity-input {
+    display: inline-block;
+    position: relative;
+}
+
+.quantity-input input {
+    border: 2px solid #c9c9c9;
+    box-shadow: none;
+    font-family: "Roboto Regular", sans-serif;
+    font-size: 1.25em;
+    height: 30px;
+    padding-left: 20px;
+    text-align: right;
+}
+
+.quantity-input::before {
+    content: "Qty.";
+    font-family: "Roboto Regular", sans-serif;
+    font-size: 1em;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.field {
+    width: 244px;
+}
+
+.price-input {
+    display: inline-block;
+    position: relative;
+}
+
+.price-input input {
+    border: 2px solid #c9c9c9;
+    box-shadow: none;
+    font-family: "Roboto Regular", sans-serif;
+    font-size: 1.25em;
+    height: 30px;
+    padding-left: 20px;
+    text-align: right;
+}
+
+.price-input::before {
+    content: "$";
+    font-family: "Roboto Regular", sans-serif;
+    font-size: 1.2em;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}

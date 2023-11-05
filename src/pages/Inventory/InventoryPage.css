@@ -1,0 +1,41 @@
+.container {
+  margin-inline: auto;
+  max-width: 2000px;
+}
+
+.inventory-table {
+  margin: 0 auto;
+  /* Adjust these styles as needed */
+  padding: 1rem;
+  border-collapse: collapse; /* Remove spacing between cells */
+}
+
+/* Add a border to the bottom of each <td> element */
+.inventory-table td {
+  border-bottom: 1px solid #ccc; /* Adjust the border style and color as needed */
+}
+
+/* Add some spacing between th and td in the table */
+.inventory-table th,
+.inventory-table td {
+  padding: 5px; /* Adjust the padding value as needed */
+}
+
+.expired {
+  background-color: rgb(187, 80, 80);
+}
+
+.expiring {
+  background-color: rgb(251, 251, 157);
+}
+
+.delete {
+  background-color: #c25353;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: red;
+}

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { getNearestFoodShelters } from '../../api';
+import { getNearestFoodShelters, getUserLocation } from '../../Services/PlacesService';
 import"./FoodShelterList.css";
 
 const FoodShelterList = () => {
-  const [latitude, setLatitude] = useState('');
-  const [longitude, setLongitude] = useState('');
+  const [address, setAddress] = useState('');
   const [foodShelters, setFoodShelters] = useState(null);
 
   const handleSearch = async () => {
     try {
-      const shelters = await getNearestFoodShelters(latitude, longitude);
+      const userLocation = await getUserLocation(address);
+      const shelters = await getNearestFoodShelters(userLocation.latitude, userLocation.longitude);
       setFoodShelters(shelters);
     } catch (error) {
       console.error('Error searching for food shelters:', error);
@@ -18,30 +18,27 @@ const FoodShelterList = () => {
 
   return (
     <div>
-      <h1>Find Nearest Food Shelters</h1>
-      <div>
-        <label>Latitude:</label>
-        <input
-          type="number"
-          value={latitude}
-          onChange={(e) => setLatitude(e.target.value)}
-        />
-        <label>Longitude:</label>
-        <input
-          type="number"
-          value={longitude}
-          onChange={(e) => setLongitude(e.target.value)}
-        />
-        <button onClick={handleSearch}>Search</button>
+      <div className="shelter-header">
+        <h1>Find Nearest Food Shelters</h1>
+        <div className="shelter-input">
+          <label>Address:</label>
+          <input
+            type="text"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          />
+          <button onClick={handleSearch}>Search</button>
+        </div>
       </div>
       {foodShelters && (
-        <ul>
+        <div className="shelter-container">
           {foodShelters.map((shelter, index) => (
-            <li key={index}>
-              {shelter.name} - {shelter.vicinity}
-            </li>
+            <div key={index} class="box">
+              <p><strong>{shelter.name}</strong></p>
+              <p>{shelter.vicinity}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
