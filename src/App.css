@@ -74,5 +74,5 @@ button {
 
 button:hover {
   background-color: darkgreen;
-  color: white;
+  color: white; /* buttons across app have same color as nav bar. DarkGreen*/
 }
