@@ -25,8 +25,8 @@ p {
 
 button {
   background-color: transparent;
-  border: 2px solid steelblue;
-  color: steelblue;
+  border: 2px solid darkgreen;
+  color: darkgreen;
   font-size: 1rem;
   font-family: inherit;
   max-width: 100px;
@@ -73,7 +73,7 @@ button {
 }
 
 button:hover {
-  background-color: darkgreen;
+  background-color: #f9b625;
   color: white; /* buttons across app have same color as nav bar. DarkGreen*/
 }
 h1, h2, h3, h4, h5, h6 {
