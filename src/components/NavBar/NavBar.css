@@ -1,51 +1,79 @@
-ul {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-li {
-  font-size: 1.25rem;
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f4f4f4;
 }
 
 .nav-bar {
-  background: steelblue;
-  box-shadow: 4px 2px 5px gray;
-  color: white;
-  margin-bottom: 2rem;
-  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* This will vertically center the items in the navbar */
+  background: darkgreen; /* Darker shade for a more professional look */
+  color: #fff;
+  padding: 0.5rem 1rem; /* Adjusted padding for consistent navbar height */
 }
 
-.nav-bar button {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 0.4rem 0.5rem;
+.nav-bar .brand {
+  display: flex;
+  align-items: center; /* Align logo with the brand name */
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #f9b625; /* A gold-ish color for branding - adjust as needed */
 }
 
-.nav-bar button:hover {
-  background: white;
-  color: steelblue;
-  cursor: pointer;
-}
-
-.brand {
-  cursor: pointer;
-  font-size: 2rem;
+.nav-bar .brand img.navbar-logo {
+  height:120px; /* Adjust logo height as needed */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
 }
 
 .nav-menu {
   display: flex;
-  align-items: center;
-  padding: 0px 50px 0px;
-  margin-right: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-link {
-  margin-right: 20px;
+.nav-menu li {
+  padding: 0 1rem;
 }
 
-.user-type {
-  margin-right: 15px;
-  margin-top: 5px;
+.nav-menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
 }
+
+.nav-menu li a:hover {
+  color: #f9b625;
+}
+
+.nav-bar button {
+  background: #f9b625;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 4px;
+}
+
+.nav-bar button:hover {
+  background: #ffc107;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
+.nav-menu li a:hover {
+  color: #f9b625;
+  font-weight: 700; 
+}
+
+

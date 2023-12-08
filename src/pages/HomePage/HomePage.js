@@ -63,7 +63,7 @@ const HomePage = () => {
     } else if (user.userType === "Homeowner/Renter") {
       return (
         <div className="store-header">
-          <h1>Welcome {user.userName}!</h1>
+          <h1>Welcome to FreshKeep, {user.userName}!</h1>
         </div>
       );
     }

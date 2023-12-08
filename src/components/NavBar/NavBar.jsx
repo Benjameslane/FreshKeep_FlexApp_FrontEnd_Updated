@@ -1,5 +1,4 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 import "./NavBar.css";
@@ -12,63 +11,56 @@ const Navbar = () => {
   const showStoreOwner = user && user.userType === "Store Owner";
 
   return (
-    <div className="nav-bar">
-      <ul>
-        <li className="brand">
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <b>FreshKeep</b>
+    <nav className="nav-bar">
+      <div className="brand">
+        <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <img src="/FK.png" alt="FreshKeep Logo" className="navbar-logo" />
+          <b></b>
+        </Link>
+      </div>
+      <ul className="nav-menu">
+        {showHomeOwner && (
+          <>
+            <li>
+              <Link to="/inventory" className="nav-link">
+                Inventory
+              </Link>
+            </li>
+            <li>
+              <Link to="/recipes" className="nav-link">
+                Recipes
+              </Link>
+            </li>
+          </>
+        )}
+        {showStoreOwner && (
+          <li>
+            <Link to="/inventory" className="nav-link">
+              Inventory
+            </Link>
+          </li>
+        )}
+        {(showHomeOwner || showStoreOwner) && (
+          <li>
+            <Link to="/discountedItems" className="nav-link">
+              Discounted Items
+            </Link>
+          </li>
+        )}
+        <li>
+          <Link to="/foodShelters" className="nav-link">
+            Food Shelters
           </Link>
-        </li>
-        <li className="nav-menu">
-          {showHomeOwner && (
-            <>
-              <Link to="/inventory" style={{ textDecoration: "none", color: "white" }}>
-                <p className="nav-link">Inventory</p>
-              </Link>
-              <Link to="/recipes" style={{ textDecoration: "none", color: "white" }}>
-                <p className="nav-link">Recipes</p>
-              </Link>
-            </>
-          )}
-          {showStoreOwner && (
-            <>
-              <Link to="/inventory" style={{ textDecoration: "none", color: "white" }}>
-                <p className="nav-link">Inventory</p>
-              </Link>
-            </>
-          )}
-          {(showHomeOwner || showStoreOwner) && (
-            <>
-              <Link to="/discountedItems" style={{ textDecoration: "none", color: "white" }}>
-                <p className="nav-link">Discounted Items</p>
-              </Link>
-            </>
-          )}
-          <Link to="/foodShelters" style={{ textDecoration: "none", color: "white" }}>
-            <p className="nav-link">Food Shelters</p>
-          </Link>
-        </li>
-        <li className="user-type">
-          {showHomeOwner && (
-            <>
-              <p>Homeowner/Renter</p>
-            </>
-          )}
-          {showStoreOwner && (
-            <>
-              <p>Store Owner</p>
-            </>
-          )}
-        </li>
-        <li className="login-logout">
-          {user ? (
-            <button onClick={logoutUser}>Logout</button>
-          ) : (
-            <button onClick={() => navigate("/login")}>Login</button>
-          )}
         </li>
       </ul>
-    </div>
+      <div className="user-actions">
+        {user ? (
+          <button onClick={logoutUser}>Logout</button>
+        ) : (
+          <button onClick={() => navigate("/login")}>Login</button>
+        )}
+      </div>
+    </nav>
   );
 };
 
