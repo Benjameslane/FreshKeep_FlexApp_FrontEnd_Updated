@@ -76,3 +76,7 @@ button:hover {
   background-color: darkgreen;
   color: white; /* buttons across app have same color as nav bar. DarkGreen*/
 }
+h1, h2, h3, h4, h5, h6 {
+  color: #f9b625;
+  font-family: 'Roboto', sans-serif;
+}
