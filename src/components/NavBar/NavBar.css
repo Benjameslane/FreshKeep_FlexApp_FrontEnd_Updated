@@ -75,5 +75,9 @@ body {
   color: #f9b625;
   font-weight: 700; 
 }
+.nav-bar .brand img.navbar-logo:hover {
+  transform: scale(1.1); /* Enlarges logo slightly on hover */
+}
+
 
 
