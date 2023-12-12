@@ -77,6 +77,6 @@ button:hover {
   color: white; /* buttons across app have same color as nav bar. DarkGreen*/
 }
 h1, h2, h3, h4, h5, h6 {
-  color: #f9b625;
+  color:#4CAF50;;
   font-family: 'league spartan', sans-serif;
 }
