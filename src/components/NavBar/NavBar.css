@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; /* This will vertically center the items in the navbar */
-  background-color: #4CAF50;/* Darker shade for a more professional look */
+  background-color: #4CAF50; 
   color: #fff;
   padding: 0.5rem 1rem; /* Adjusted padding for consistent navbar height */
 }

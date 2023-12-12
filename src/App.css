@@ -77,6 +77,12 @@ button:hover {
   color: white; /* buttons across app have same color as nav bar. DarkGreen*/
 }
 h1, h2, h3, h4, h5, h6 {
-  color:#4CAF50;;
-  font-family: 'league spartan', sans-serif;
+  color: #4CAF50;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 2px solid #4CAF50; /* Add bottom border */
+  padding-bottom: 10px; /* Padding below the title */
+  margin-bottom: 30px; /* Space below the title */
+  width: fit-content; /* Adjust width to fit the content */
+  margin-left: auto; /* Center align the title */
+  margin-right: auto;
 }
